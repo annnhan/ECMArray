@@ -1,0 +1,2 @@
+/* https://github.com/hanan198501/ECMArray.git */
+!function(a,b){function c(a){return"function"==typeof a}b.prototype;!c(b.isArray)&&(b.isArray=function(a){return"[object Array]"===Object.prototype.toString.call(a)})}(window,Array);

@@ -1,0 +1,20 @@
+{
+    "name": "ECMArray",
+    "version": "1.0.0",
+    "description": "Let the array support ECMAScript5",
+    "author": {
+        "name": "阿安",
+        "url": "http://cssha.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hanan198501/ECMArray.git"
+    },
+    "devDependencies": {
+        "grunt-contrib-uglify": "*",
+        "grunt-contrib-concat": "*",
+        "grunt-contrib-copy": "*",
+        "grunt-contrib-clean": "*",
+        "grunt-contrib-jshint": "*"
+    }
+}
