@@ -20,6 +20,13 @@ module.exports = function (grunt) {
                     'src/isArray.js',
                     'src/forEach.js',
                     'src/map.js',
+                    'src/filter.js',
+                    'src/every.js',
+                    'src/some.js',
+                    'src/reduce.js',
+                    'src/reduceRight.js',
+                    'src/indexOf.js',
+                    'src/lastIndexOf.js',
                     'src/end.js'
                 ],
                 dest: 'build/ecmarray.js'
@@ -61,6 +68,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-cachebuster');
 
     // 默认执行的任务
-    grunt.registerTask('default', ['concat', 'uglify', 'cachebuster']);
+    grunt.registerTask('default', [
+        'concat',
+        'uglify',
+        'cachebuster'
+    ]);
 
 };

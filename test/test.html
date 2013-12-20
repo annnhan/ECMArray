@@ -9,13 +9,15 @@ function log(v) {
     document.write(v + '<br/>');
 }
 window.onload = function (){
+
     var arr = [1, 2, 3, 4, 5];
-    var arr2 = ['a', 'b', 'c', 'd', 'e']
-    var arr3 = arr.map_(function (item, index, array) {
-        console.log(this);
-        return this[index] + 1;
-    }, arr2);
+
+    var arr2 = ['a', 'b', 'e', 'c', 'd', 'e'];
+
+    var arr3 = arr2.indexOf('e');
+
     log(arr3);
+
 }
 </script>
 </head>
