@@ -18,6 +18,8 @@ module.exports = function (grunt) {
                     'src/start.js',
                     'src/basic.js',
                     'src/isArray.js',
+                    'src/forEach.js',
+                    'src/map.js',
                     'src/end.js'
                 ],
                 dest: 'build/ecmarray.js'
@@ -25,16 +27,30 @@ module.exports = function (grunt) {
         },
 
         uglify: {
-            //文件头部输出信息
             options: {
                 banner: '/* https://github.com/hanan198501/ECMArray.git */\n'
             },
-            //具体任务配置
             build: {
-                //源文件
                 src: 'build/ecmarray.js',
-                //目标文件
                 dest: 'build/ecmarray-min.js'
+            }
+        },
+
+        cachebuster: {
+            build: {
+                options: {
+                    format: 'json',
+                    basedir: 'build/',
+                    formatter: function(hashes) {
+                        var arr = [];
+                        for (var i in hashes) {
+                            arr.push(i);
+                        }
+                        return JSON.stringify(hashes, arr, 4);
+                    }
+                },
+                src: [ 'build/*.js' ],
+                dest: 'build/MD5.json'
             }
         }
     });
@@ -42,8 +58,9 @@ module.exports = function (grunt) {
     // 加载指定插件任务
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-cachebuster');
 
     // 默认执行的任务
-    grunt.registerTask('default', ['concat', 'uglify']);
+    grunt.registerTask('default', ['concat', 'uglify', 'cachebuster']);
 
 };

@@ -1,2 +1,2 @@
 
-})(window, Array);
+})(this, Array);

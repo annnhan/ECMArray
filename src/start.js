@@ -1,1 +1,1 @@
-;(function (window, Array, undefined) {
+;(function (GLOBAL, Array, undefined) {

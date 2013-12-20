@@ -3,13 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <title>test</title>
-<script type="text/javascript" src="../build/ecmarray.js"></script>
+<script type="text/javascript" src="../build/ecmarray-min.js"></script>
 <script type="text/javascript">
 function log(v) {
     document.write(v + '<br/>');
 }
 window.onload = function (){
-    log(Array.isArray([]));
+    var arr = [1, 2, 3, 4, 5];
+    var arr2 = ['a', 'b', 'c', 'd', 'e']
+    var arr3 = arr.map_(function (item, index, array) {
+        console.log(this);
+        return this[index] + 1;
+    }, arr2);
+    log(arr3);
 }
 </script>
 </head>

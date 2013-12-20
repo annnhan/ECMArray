@@ -1,2 +1,2 @@
 /* https://github.com/hanan198501/ECMArray.git */
-!function(a,b){function c(a){return"function"==typeof a}b.prototype;!c(b.isArray)&&(b.isArray=function(a){return"[object Array]"===Object.prototype.toString.call(a)})}(window,Array);
+!function(a,b){function c(a){return"function"==typeof a}function d(a,d){!c(b.prototype[a])&&(b.prototype[a]=d)}!c(b.isArray)&&(b.isArray=function(a){return"[object Array]"===Object.prototype.toString.call(a)}),d("forEach",function(b,c){for(var d=0,e=this.length;e>d;d++)b.call(c||a,this[d],d,this)}),d("map_",function(b,c){for(var d=[],e=0,f=this.length;f>e;e++)d.push(b.call(c||a,this[e],e,this));return d})}(this,Array);

@@ -15,6 +15,7 @@
         "grunt-contrib-concat": "*",
         "grunt-contrib-copy": "*",
         "grunt-contrib-clean": "*",
-        "grunt-contrib-jshint": "*"
+        "grunt-contrib-jshint": "*",
+        "grunt-cachebuster": "*"
     }
 }

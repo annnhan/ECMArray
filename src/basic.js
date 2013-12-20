@@ -1,4 +1,7 @@
-function isFunction (value) {
-    return typeof value === 'function';
+function isFunction (val) {
+    return typeof val === 'function';
 }
-var fn = Array.prototype;
+
+function add(val, fun) {
+    !isFunction(Array.prototype[val]) && (Array.prototype[val] = fun);
+}
